@@ -2,7 +2,7 @@
 
 [App Upgrade: Flutter Demo App](https://github.com/appupgrade-dev/app_upgrade_flutter_demo_app) is a sample flutter app integrated with [App Upgrade](https://appupgrade.dev) via API to demonstrate how Force upgrade works in flutter app with [App Upgrade](https://appupgrade.dev) API.
 
-You can find the demo app integrated via SDK in [main](https://github.com/appupgrade-dev/app-upgrade-assets) branch.
+You can find the demo app integrated via SDK in [main](https://github.com/appupgrade-dev/app_upgrade_flutter_demo_app) branch.
 
 ## Installation
 
