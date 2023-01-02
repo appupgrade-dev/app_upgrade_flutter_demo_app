@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'App Upgrade Demo App',
+      title: 'App Upgrade Flutter Demo App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primaryColor: const Color(0XFFea1e5b),
       ),
-      home: const MyHomePage(title: 'App Upgrade Demo App'),
+      home: const MyHomePage(title: 'App Upgrade Flutter Demo App'),
     );
   }
 }
@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
           'https://appupgrade.dev/api/v1/versions/check?app_name=Wallpaper app&app_version=1.0.0&platform=android&environment=production'),
       headers: {
         "Content-Type": "application/json; charset=utf-8",
-        "x-api-key": "ZjdiMDFmOWUtNTM5Ni00OTNhLWI1NjUtMjNiODc1NmJiNjEx"
+        "x-api-key": "ZWY0ZDhjYjgtYThmMC00NTg5LWI0NmUtMjM5OWZkNjkzMzQ5"
       },
     );
 
