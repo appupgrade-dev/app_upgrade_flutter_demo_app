@@ -1,24 +1,8 @@
-# demo_app
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 # App Upgrade: Flutter Demo App
 
-[App Upgrade: Flutter Demo App](https://github.com/appupgrade-dev/app_upgrade_flutter_demo_app) is a sample flutter app integrated with [App Upgrade](https://appupgrade.dev) via API to demonstrate how Force upgrade works in flutter app with [App Upgrade](https://appupgrade.dev) API.
+[App Upgrade: Flutter Demo App](https://github.com/appupgrade-dev/app_upgrade_flutter_demo_app) is a sample flutter app integrated with [App Upgrade Flutter SDK](https://pub.dev/packages/app_upgrade_flutter_sdk) to demonstrate how Force upgrade works in flutter app with [App Upgrade](https://appupgrade.dev).
 
-You can find the demo app integrated via SDK in [main](https://github.com/appupgrade-dev/app-upgrade-assets) branch.
+You can find the flutter demo app integrated via API in [integration-via-api](https://github.com/appupgrade-dev/app_upgrade_flutter_demo_app/tree/integrate-via-api) branch.
 
 ## Installation
 
@@ -34,10 +18,10 @@ To get started, clone the repo:
 
 2. Open the directory in your code editor.
 
-3. Open the `app_upgrade_flutter_demo_app/lib/main.dart` file, and replace required values in line 81-86
+3. Open the `app_upgrade_flutter_demo_app/lib/main.dart` file, and replace required values in line 14-32
    | Key                   | Value Description |
    | -----------------------|-------------|
-   | `x-api-key`     | Your API Key. Required. |
+   | `xApiKey`     | Your API Key. Required. |
    | `appName`  | Your app name. Required. |
    | `appVersion`  | Your app version. Required. |
    | `platform`  | Your app platform, ex: android or iOS. Required. |
@@ -46,12 +30,27 @@ To get started, clone the repo:
    Example:
 
    ```js
-      Uri.parse(
-          'https://appupgrade.dev/api/v1/versions/check?app_name=Wallpaper app&app_version=1.0.0&platform=android&environment=production'),
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-        "x-api-key": "ZWY0ZDhjYjgtYThmMC00NTg5LWI0NmUtMjM5OWZkNjkzMzQ5"
-      },
+    AppInfo appInfo = AppInfo(
+      appName: 'Wallpaper app', // Your app name
+      appVersion: '1.0.0', // Your app version
+      platform: 'android', // App Platform, android or ios
+      environment:
+          'production', // Environment in which app is running, production, staging or development etc.
+    );
+
+    return MaterialApp(
+      title: 'App Upgrade Flutter Demo App',
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('App Upgrade Flutter Demo App'),
+          ),
+          body: AppUpgradeAlert(
+            xApiKey:
+                'ZWY0ZDhjYjgtYThmMC00NTg5LWI0NmUtMjM5OWZkNjkzMzQ5', // Your x-api-key
+            appInfo: appInfo,
+            child: Center(child: Text('Hello World!')),
+          )),
+    );
    ```
 
 4. Save `main.dart` file.

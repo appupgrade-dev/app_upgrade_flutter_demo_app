@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'Upgrader Example',
+      title: 'App Upgrade Flutter Demo App',
       home: Scaffold(
           appBar: AppBar(
             title: Text('App Upgrade Flutter Demo App'),
