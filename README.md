@@ -26,6 +26,7 @@ To get started, clone the repo:
    | `appVersion`  | Your app version. Required. |
    | `platform`  | Your app platform, ex: android or iOS. Required. |
    | `environment`  | Your app enviroment, ex: dev, stating, production. Required. |
+   | `appLanguage`  | Your app language, ex: en, es etc. Optional. |
 
    Example:
 
@@ -36,6 +37,7 @@ To get started, clone the repo:
       platform: 'android', // App Platform, android or ios
       environment:
           'production', // Environment in which app is running, production, staging or development etc.
+      appLanguage: 'es'    
     );
 
     return MaterialApp(

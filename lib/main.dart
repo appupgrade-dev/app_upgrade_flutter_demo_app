@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       platform: 'android', // App Platform, android or ios
       environment:
           'production', // Environment in which app is running, production, staging or development etc.
+      appLanguage: 'es',    
     );
 
     return MaterialApp(
