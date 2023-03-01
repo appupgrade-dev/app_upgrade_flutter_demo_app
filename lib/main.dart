@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
       platform: 'android', // App Platform, android or ios
       environment:
           'production', // Environment in which app is running, production, staging or development etc.
-      appLanguage: 'es',    
+      appLanguage: 'es', 
+      // preferredAndroidMarket: PreferredAndroidMarket.huawei, // or PrefferedAndroidMarket.huawei or PrefferedAndroidMarket.other If not provided default android marketplace is Google playstore. Optional
+      // otherAndroidMarketUrl: 'https://otherandroidmarketplaceurl.com/app/id', // Required only if PreferredAndroidMarket is other.   
     );
 
     return MaterialApp(
