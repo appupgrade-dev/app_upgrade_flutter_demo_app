@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     AppInfo appInfo = AppInfo(
+      appId: 'com.example.chrome',
       appName: 'Wallpaper app', // Your app name
       appVersion: '1.0.0', // Your app version
       platform: 'android', // App Platform, android or ios
@@ -19,7 +20,12 @@ class MyApp extends StatelessWidget {
           'production', // Environment in which app is running, production, staging or development etc.
       appLanguage: 'es', 
       // preferredAndroidMarket: PreferredAndroidMarket.huawei, // or PrefferedAndroidMarket.huawei or PrefferedAndroidMarket.other If not provided default android marketplace is Google playstore. Optional
-      // otherAndroidMarketUrl: 'https://otherandroidmarketplaceurl.com/app/id', // Required only if PreferredAndroidMarket is other.   
+      // otherAndroidMarketUrl: 'https://otherandroidmarketplaceurl.com/app/id', // Required only if PreferredAndroidMarket is other.  
+      // customAttributes: {
+      //   "os": 12,
+      //   "country": "IN",
+      //   "build": 101
+      // } 
     );
 
     return MaterialApp(
